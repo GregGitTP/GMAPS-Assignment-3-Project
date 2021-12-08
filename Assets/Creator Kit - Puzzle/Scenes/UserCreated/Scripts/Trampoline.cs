@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Trampoline : MonoBehaviour
 {
+    public float force = 2000f;
+
     private void OnCollisionEnter(Collision other){
-        other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up*2000f);
+        other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up*force);
     }
 }
