@@ -8,6 +8,9 @@ public class Cannon : MonoBehaviour
     public Transform cannon;
     public Transform barrel;
 
+    public GameObject marble;
+    public Transform mSpawnPoint;
+
     private bool turningLeft = false;
     private bool turningRight = false;
 
@@ -37,6 +40,10 @@ public class Cannon : MonoBehaviour
 
     IEnumerator Shoot(){
         shooting = true;
+
+        Instantiate(marble,mSpawnPoint.position,Quaternion.identity);
+        yield return new WaitForSeconds(1f);
+        
         while(barrel.localRotation.eulerAngles.x < 39){
             barrel.localRotation = Quaternion.Slerp(barrel.localRotation,Quaternion.Euler(40,0,0),.01f);
             yield return null;
