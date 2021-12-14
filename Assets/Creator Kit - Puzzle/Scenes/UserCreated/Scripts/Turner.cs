@@ -15,7 +15,7 @@ public class Turner : MonoBehaviour
     IEnumerator StartTurning(){
         yield return new WaitForSeconds(.5f);
         for(;;){
-            turner.transform.rotation = Quaternion.Slerp(turner.transform.rotation, Quaternion.Euler(0, 0, -100), .02f*Time.deltaTime);
+            turner.transform.rotation = Quaternion.Slerp(turner.transform.rotation, Quaternion.Euler(0, 0, -100), .01f*Time.deltaTime);
             yield return null;
         }
     }

@@ -13,7 +13,7 @@ public class Swing : MonoBehaviour
     }
 
     IEnumerator StartSwing(){
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.8f);
         rb.isKinematic = false;
     }
 }
