@@ -22,7 +22,7 @@ public class GateButton : MonoBehaviour
     }
 
     IEnumerator DelayOpenHatch(){
-        yield return new WaitForSeconds(12f);
+        yield return new WaitForSeconds(15f);
         hatch.SetActive(false);
     }
 }

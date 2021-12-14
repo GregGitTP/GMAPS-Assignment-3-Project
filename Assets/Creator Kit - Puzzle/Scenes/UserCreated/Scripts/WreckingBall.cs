@@ -21,7 +21,6 @@ public class WreckingBall : MonoBehaviour
         if(!swinging){
             Debug.DrawRay(triggerPt.position,triggerPt.right);
             if(Physics.Raycast(triggerPt.position,triggerPt.right,1f)){
-                Debug.Log("start");
                 StartCoroutine(Swing());
             }
         }
